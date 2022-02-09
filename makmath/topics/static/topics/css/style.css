@@ -1,0 +1,307 @@
+/*Плавающая кнопка*/
+.fixedbut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    background: blue;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 23px;
+    font-size: 17px;
+    margin: auto;
+    border-radius: 50px;
+    font-size: 36px;
+}
+
+.fixedbut:hover {
+    background: #222;
+}
+
+
+/*горизонтальное меню стиль*/
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+.top-menu {
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 3px 0 7px rgba(0, 0, 0, .3);
+    padding: 20px;
+}
+
+.top-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navbar-logo {
+    display: inline-block;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    line-height: 61px;
+    padding-left: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: #F73E24;
+    transition: .3s linear;
+}
+
+.menu-main a:before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #F73E24;
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg) translateX(6.5px);
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.menu-main a:hover:before {
+    opacity: 1;
+}
+
+@media (max-width: 660px) {
+    .menu-main {
+        float: none;
+        padding-top: 20px;
+    }
+
+    .top-menu {
+        text-align: center;
+        padding: 20px 0 0 0;
+    }
+
+    .menu-main a {
+        padding: 0 10px;
+    }
+
+    .menu-main a:before {
+        transform: rotate(45deg) translateX(-6px);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-main li {
+        display: block;
+    }
+}
+
+/*вертикальное меню стиль*/
+.category-wrap {
+    padding: 15px;
+    background: white;
+    width: 200px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.category-wrap h3 {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .6);
+    margin: 0 0 10px;
+    padding: 0 5px;
+    position: relative;
+}
+
+.category-wrap h3:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #80C8A0;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    box-shadow: -8px -8px #80C8A0, 0 -8px #80C8A0, -8px 0 #80C8A0;
+}
+
+.category-wrap ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.category-wrap li {
+    margin: 12px 0 0 0px;
+}
+
+.category-wrap a {
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    color: rgba(0, 0, 0, .6);
+    padding: 5px;
+    position: relative;
+    transition: .3s linear;
+}
+
+.category-wrap a:after {
+    content: "\f18e";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 5px;
+    color: white;
+    transition: .2s linear;
+}
+
+.category-wrap a:hover {
+    background: #80C8A0;
+    color: white;
+}
+
+
+/* /////вертикальное меню стиль*/
+.title {
+    font-size: 20px;
+    color: cornflowerblue;
+    font-stretch: condensed;
+}
+
+
+.but {
+
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 20px auto;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;
+}
+
+.but:not(.active) {
+    box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: linear-gradient(#3b2751, #271739);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+
+.but:not(.active):hover,
+.but:not(.active):focus {
+    transition: color 200ms linear, text-shadow 500ms linear;
+    color: #fff;
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+}
+
+.but:not(:hover) {
+    transition: 0.6s;
+}
+
+
+/*Tabs style*/
+.tabs {
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.tabs > input {
+    display: none;
+}
+
+.tabs > div {
+    display: none;
+    padding: 12px;
+    border: 1px solid #C0C0C0;
+    background: #FFFFFF;
+}
+
+.tabs > label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #666666;
+    border: 1px solid #C0C0C0;
+    background: #E0E0E0;
+    cursor: pointer;
+}
+
+.tabs > input:checked + label {
+    color: #000000;
+    border: 1px solid #C0C0C0;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 {
+    display: block;
+}
+
+#zatemnenie {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#okno {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+}
+
+#zatemnenie:target {
+    display: block;
+}
+
+.close {
+    display: inline-block;
+    border: 1px solid #0000cc;
+    color: #0000cc;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+.close:hover {
+    background: #e6e6ff;
+}

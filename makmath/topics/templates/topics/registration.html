@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" href="{% static 'topics/css/registration_style.css' %}" rel="stylesheet" />
+
+    <title>Регистрация на MakMath</title>
+</head>
+{% block content %}
+
+<body>
+
+
+    <div class="registration_area">
+
+        <p class="msg">Регистрация на <b><i>MakMath</i></b>!!!</p>
+
+        <form method="post">
+            <div>{{ form.non_field_errors }}</div>
+            {% csrf_token %}
+            {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="msg">{{ f.errors }}</div>
+            {% endfor %}
+            <button type="submit" class="pressed-button">Регистрация</button>
+            
+        </form>
+
+        <a class="pressed-button" href="{% url 'home' %}">На Главную</a>
+
+    </div>
+
+    {% endblock %}
+</body>
+
+</html>

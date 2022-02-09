@@ -1,0 +1,27 @@
+{% extends 'topics/base.html' %}
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" href="{% static 'topics/css/index_style.css' %}" rel="stylesheet" />
+
+    <title>{{title}}</title>
+
+</head>
+
+{% block content %}
+
+<div class="invitation">
+    <h1>{{title}}</h1>
+
+</div>
+
+
+<div style="text-align: center; font-size: 14pt;">
+    <p>Сайт по высшей математике на Python с Django. </p>
+
+    <p>Сайт разработал студент группы 10701119 Маканов Дмитрий. </p>
+
+
+</div>
+
+{% endblock %}

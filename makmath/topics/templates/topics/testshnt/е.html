@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="charset=utf-8" />
+    <title>Исторический турнир</title>
+    <style type="text/css">
+        body {
+            font: 10pt Arial, Helvetica, sans-serif;
+            /* Шрифт на веб-странице */
+            background-image: linear-gradient(99deg, rgba(2, 0, 36, 1) 0%, rgba(16, 16, 56, 1) 39%, rgba(0, 212, 255, 1) 100%);
+            /* Цвет фона */
+        }
+
+        h2 {
+            font-size: 1.1em;
+            /* Размер шрифта */
+            color: #800040;
+            /* Цвет текста */
+            margin-top: 0;
+            /* Отступ сверху */
+        }
+
+        .header {
+            font-size: 2.2em;
+            /* Размер текста */
+            text-align: center;
+            /* Выравнивание по центру */
+            padding: 5px;
+            /* Отступы вокруг текста */
+            background: #8fa09b;
+            /* Цвет фона шапки */
+            color: #ffe;
+            /* Цвет текста */
+        }
+
+        .sidebar {
+            padding: 0 10px;
+            /* Отступы вокруг текста */
+            float: right;
+            /* Обтекание по правому краю */
+
+
+            background: #fc0;
+            /* Цвет фона */
+
+            -moz-box-sizing: border-box;
+            /* Для Firefox */
+            -webkit-box-sizing: border-box;
+            /* Для Safari и Chrome */
+            box-sizing: border-box;
+            /* Для IE и Opera */
+            height: 100vh;
+
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            display: block;
+            font-size: 28px;
+            color: rgba(0, 0, 0, .8);
+            padding: 5px;
+            position: relative;
+            transition: .3s linear;
+        }
+
+        .tabs {
+            width: 100%;
+            padding: 0px;
+            margin: 0 auto;
+        }
+
+        .tabs>input {
+            display: none;
+        }
+
+        .tabs>div {
+            display: none;
+            padding: 12px;
+            border: 1px solid #C0C0C0;
+            background: #FFFFFF;
+        }
+
+        .tabs>label {
+            display: inline-block;
+            padding: 7px;
+            margin: 0 -5px -1px 0;
+            text-align: center;
+            color: #666666;
+            border: 1px solid #C0C0C0;
+            background: #E0E0E0;
+            cursor: pointer;
+        }
+
+        .tabs>input:checked+label {
+            color: #000000;
+            border: 1px solid #C0C0C0;
+            border-bottom: 1px solid #FFFFFF;
+            background: #FFFFFF;
+        }
+
+        #tab_1:checked~#txt_1,
+        #tab_2:checked~#txt_2 {
+            display: block;
+        }
+
+        .content {
+
+            padding: 10px;
+            /* Поля вокруг текста */
+            background: #fff;
+            /* Цвет фона правой колонки */
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">Исторический турнир</div>
+
+    <div class="sidebar">
+        <div class="tabs">
+            <input type="radio" name="inset" value="" id="tab_1" checked>
+            <label for="tab_1">Вкладка №1</label>
+
+            <input type="radio" name="inset" value="" id="tab_2">
+            <label for="tab_2">Вкладка №2</label>
+
+
+            <div id="txt_1">
+                <p>Произвольное содержимое...</p>
+                <p>Произвольное содержимое...</p>
+                <p>Произвольное содержимое...</p>
+            </div>
+            <div id="txt_2">
+                <p>Вторая вкладка</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+        <h2>Опрос общественного мнения показал</h2>
+
+        <ul>
+            <li>что пароход изобретен: Петром I, А. Эйнштейном и А. Поповым;</li>
+            <li>Диего Веласкес писал свои полотна в стиле: империализма, кубизма
+                и империосионизма;</li>
+            <li>Фаросский маяк находится в Фаросе;</li>
+            <li>конфуцианство возникло в: Италии, Корее и Франции;</li>
+            <li>богами торговли и воровства в Древней Греции были: Марс, Меркурий
+                и Дионис;</li>
+            <li>Франция – это город;</li>
+            <li>богами загробного мира в Египте были: Аид, Анубис и Ассирис;</li>
+            <li>столица Золотой Орды — Монголия;</li>
+            <li>главные противники Александра Македонского: татаро-монголы, Дедал
+                и Цезарь;</li>
+            <li>священными птицами — символами Афин были: ворона и орел;</li>
+            <li>в Древней Греции морями повелевали боги: Плутон, Нептун и Тритон.</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

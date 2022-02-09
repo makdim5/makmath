@@ -1,0 +1,98 @@
+{% extends 'topics/base.html' %}
+{% load static %}
+
+{% block content %}
+<link type="text/css" href="{% static 'topics/css/topic_style.css' %}" rel="stylesheet" />
+<!Подключение математики>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+        integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+        integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+
+    <div class="invitation">
+        <h1>{{title}}</h1>
+
+    </div>
+
+    {%if lection%}
+    <div class="lection">
+        {% autoescape off %}
+        {{lection|safe}}
+        {% endautoescape %}
+
+    </div>
+    {% else %}
+    <p style="font-size: 20px; text-align: center;">Лекция пока недоступна!!!</p>
+
+    {% endif %}
+
+
+    <div class="invitation">
+        <h1>Задания</h1>
+
+    </div>
+
+    {% if request.user.is_authenticated %}
+                
+
+    {% if tasks %}
+    {% for form in forms %}
+    <div class="task">
+
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <p>{{form.answer.label}}</p>
+
+            <p> {{form.answer}}</p>
+
+
+            <input type="submit" id="{{form.prefix}}" class="check-button" value="Проверить" />
+
+            {% if form.flag %}
+            <p style="color: green;">Задание выполнено !!!</p>
+
+            {%else%}
+            <p style="color: orange;">Задание не выполнено!!!</p>
+            {% endif %}
+
+        </form>
+
+    </div>
+    {% endfor %}
+
+    {% else %}
+    <p style="font-size: 20px; text-align: center;">Задания пока недоступны!!!</p>
+
+    {% endif %}
+
+    {% else %}
+    <p style="font-size: 20px; text-align: center;">
+        Выполнение заданий недоступно неавторизированным пользователям!!!</p>
+
+    {% endif %}
+
+    <div>
+        <p><button class="check-button" onclick="document.location='{{section_link}}' ">Назад</button></p>
+
+    </div>
+
+    <script>
+        let cords = ['scrollX', 'scrollY'];
+        // Перед закрытием записываем в локалсторадж window.scrollX и window.scrollY как scrollX и scrollY
+        window.addEventListener('unload', e => cords.forEach(cord => localStorage[cord] = window[cord]));
+        // Прокручиваем страницу к scrollX и scrollY из localStorage (либо 0,0 если там еще ничего нет)
+        window.scroll(...cords.map(cord => localStorage[cord]));
+
+
+
+    </script>
+
+
+    {% endblock %}

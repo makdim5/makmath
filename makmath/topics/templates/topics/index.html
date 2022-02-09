@@ -1,0 +1,39 @@
+{% extends 'topics/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="invitation">
+    <h1>Портал для подготовки к экзаменам по высшей математике MakMath</h1>
+    <p>Приветствую всех пользователей данного сайта. Здесь вы можете узнать всю минимальную необходимую теорию и примеры
+        решения задач по соответствующим разделам высшей математики. Связаться с автором можно через электронную почту:
+        dmakanov62@gmail.com.</p>
+    <p>Удачной подготовки к экзаменам по высшей математике😁😁!</p>
+
+
+</div>
+
+
+
+
+{% for s in sections %}
+<div class="topic_section">
+    <div style="margin: 100px">
+        <img src="{{s.image_link}}" alt="" title={{s.name}} width='300' height="250">
+    </div>
+
+    <div>
+        <hr align="left" width="100%" size="2" color="#CABDBB" />
+
+        <p style="font-size:50px;color: blue;">{{s.name}}</p>
+
+        <hr align="left" width="100%" size="2" color="#CABDBB" />
+
+        <p style="font-size:25px;font-family: sans-serif;">{{s.description}}</p>
+
+        <p><button class="pressed-button" onclick="document.location='{% url 'section' s.slug %}'">Перейти</button></p>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

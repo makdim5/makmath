@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" href="{% static 'topics/css/authentication_style.css' %}" rel="stylesheet" />
+
+    <title>Авторизация на MakMath</title>
+</head>
+
+<body>
+
+    <div style="display: inline-flex; margin: 30px 30px 30px 30px;">
+        <div class="welcome_info">
+
+            <img src="{% static 'topics/images/logo.png' %}">
+            <p>Добро пожаловать на <b><i>MakMath</i></b>!!!
+            <p>
+
+        </div>
+
+        <div class="authentification_area">
+
+            <form method="post">
+                <div class="msg">{{ form.non_field_errors }}</div>
+                {% csrf_token %}
+                {% for f in form %}
+                <p><label for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                <div class="msg">{{ f.errors }}</div>
+                {% endfor %}
+                <button type="submit" class="pressed-button">Войти</button>
+            </form>
+
+            <a class="pressed-button" href="{% url 'registration' %}">Регистрация</a>
+
+        </div>
+
+        <p style="display: inline-table; 
+    "> <a class="pressed-button" href="{% url 'home' %}">На Главную</a></p>
+
+       
+    </div>
+    
+    
+</body>
+
+</html>

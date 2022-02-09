@@ -1,0 +1,36 @@
+{% extends 'topics/base.html' %}
+{% load static %}
+
+{% block content %}
+<link type="text/css" href="{% static 'topics/css/topic_style.css' %}" rel="stylesheet" />
+
+<div class="invitation">
+    <h1>{{title}}</h1>
+    <h3 style="text-align: center; color:white;">{{description}}</h3>
+</div>
+
+<div>
+
+</div>
+
+
+<div>
+    <ul style="text-align:center;">
+        {% for p in topics %}
+
+
+        <li style="list-style-type: none;">
+            <p><button class="pressed-button"
+                    onclick="document.location='{% url 'topic' p.slug %}'">{{p.topic_name}}</button></p>
+
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+<div>
+    <p><button class="pressed-button" onclick="document.location='{% url 'home' %}'">Назад</button></p>
+
+</div>
+{% endblock %}

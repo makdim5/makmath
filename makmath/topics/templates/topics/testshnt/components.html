@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Изучаем HTML CSS</title>
+
+    <!Подключение математики>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    
+    <!плавающая кнопка>
+    <div class="fixedbut" onclick="document.location='https://vk.com/makdim5'">VK</div>
+
+    <nav class="top-menu">
+        <a class="navbar-logo" href=""><img src="https://html5book.ru/wp-content/uploads/2017/04/lily-logo.png"></a>
+        <ul class="menu-main">
+            <li><a href="">Work</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="category-wrap">
+            <h3>Категории</h3>
+            <ul>
+                <li><a href="">Дизайн</a></li>
+                <li><a href="">Фотошоп</a></li>
+                <li><a href="">Книги</a></li>
+                <li><a href="">Журналы</a></li>
+                <li><a href="">Картинки</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <h1 class="title">Hello World!!!</h1>
+
+    <p>Привет, <strong>пользователь!!!!</strong></p>
+
+    <p><b>Жирный</b> <i>курсив</i> <s>зачёркнутый</s><br> <u>подчёркнутый</u></p>
+
+
+    <p> </p>
+
+    <div class="topic_section">
+
+        <hr align="center" width="100%" size="5" color="#000080" />
+
+        <div style="float: left;">
+            <img src="https://htmlbase.ru/storage/app/media/html5-css3.png" alt="" title="HTML picture">
+        </div>
+
+        <div style="margin-left: 30%;">
+            <hr align="left" width="300" size="2" color="#CABDBB" />
+
+            <p style="font-size:36px;color: blue;">Название</p>
+
+            <hr align="left" width="300" size="2" color="#CABDBB" />
+
+            <p style="font-size:18px;font-family: sans-serif;">Описание</p>
+
+            <div style="font-size: 20px;">
+                <p>Blah blah \(e^{i\pi}+1=0\) blah blah blah.</p>
+                \[e^{i\pi}+1=0\]
+                \[|M_1M_2|=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}\]
+                \[(\rho \cos\varphi)^2+ (\rho \sin\varphi)^2=1;\\ \rho^2(\cos^2\varphi+\sin^2\varphi)=1;\\ \rho^2=1;\\ \rho=1\]
+                <p>Blah blah blah blah blah.</p>
+
+
+
+			 \[y = 3x^{\frac{2}{3}}-2x^{\frac{5}{2}}+x^{-2}\]
+
+                $$a = {F \over m}$$
+                $$ 1\ watt = 1\ W = {1\ joule\over 1\  second} = J/s = 1\ J s^{-1} $$
+
+                <p>Просто формула \(a = {F \over m}\) для закона Нимрот</p>
+            </div>
+
+
+            <p><button class="but" onclick="document.location='https://vk.com/makdim5'">Перейти</button></p>
+        </div>
+
+        <hr align="center" width="100%" size="5" color="#000080" />
+
+
+    </div>
+
+    <p><iframe src="https://drive.google.com/file/d/1AiRJgJl6MxkKSNvH9OGen6MSevqwQQCV/preview" width="640" height="480" allow="autoplay"></iframe></p>
+    
+    <p><button class="but" onclick="document.location='https://vk.com/makdim5'">Переход по ссылке</button></p>
+
+    <ul>
+        <li>пункт 1</li>
+        <li>пункт 2</li>
+        <li>пункт 3</li>
+    </ul>
+
+    <ol>
+        <li>пункт 4</li>
+        <li>пункт 5</li>
+        <li>пункт 6
+
+            <ul>
+
+                <li>пункт 7</li>
+
+            </ul>
+
+
+        </li>
+    </ol>
+    /*Tabs*/
+    <div class="tabs">
+        <input type="radio" name="inset" value="" id="tab_1" checked>
+        <label for="tab_1">Вкладка №1</label>
+
+        <input type="radio" name="inset" value="" id="tab_2">
+        <label for="tab_2">Вкладка №2</label>
+
+        <input type="radio" name="inset" value="" id="tab_3">
+        <label for="tab_3">Вкладка №3</label>
+
+        <input type="radio" name="inset" value="" id="tab_4">
+        <label for="tab_4">Вкладка №4</label>
+
+        <div id="txt_1">
+            <p>Произвольное содержимое...</p>
+            <p>Произвольное содержимое...</p>
+            <p>Произвольное содержимое...</p>
+        </div>
+        <div id="txt_2">
+            <p>Вторая вкладка</p>
+        </div>
+        <div id="txt_3">
+            <p>Размеры содержимого вкладок</p>
+            <p>могут отличаться по высоте!</p>
+        </div>
+        <div id="txt_4">
+            <img src="image/logo.png" width="533" height="77" alt="Лого">
+        </div>
+    </div>
+    
+    <div id="zatemnenie">
+      <div id="okno">
+        Всплывающее окошко!<br>
+        <a href="#" class="close">Закрыть окно</a>
+      </div>
+    </div>
+     
+    <a href="#zatemnenie">Вызвать всплывающее окно</a>
+
+</body>
+
+</html>
